@@ -1,9 +1,8 @@
-import Todo from "./TODO/Todo"
-
+import FoodMain from "./FoodProject/FoodMain"
 function App() {
   return (
     <div className="mx-4 mt-4">
-      <Todo></Todo>
+      <FoodMain></FoodMain>
     </div>
   )
 }

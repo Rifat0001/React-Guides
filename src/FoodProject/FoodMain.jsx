@@ -1,13 +1,28 @@
+import { useState } from "react";
+import Container from "./Container";
+import FoodSearch from "./FoodSearch";
 import FootItems from "./FootItems";
 
 const FoodMain = () => {
-    let foodItems = ['Milk', 'Rice', 'Fish', 'Vegetables', 'Meat', 'Egg'];
+    const [foodItems, setFoodItems] = useState(['Milk', 'Rice', 'Fish', 'Vegetables'])
+    const handleSearch = (e) => {
+        if (e.key == 'Enter') {
+            console.log(e.target.value);
+            const newFoodItem = e.target.value;
+            const newFoodList = [...foodItems, newFoodItem];
+            setFoodItems(newFoodList)
+            e.target.value = ''
+        }
+
+    }
     return (
         <div>
-            <div className="mx-4 mt-4">
-                <h1>Healthy Food</h1>
-                <FootItems foodItems={foodItems}></FootItems>
-            </div>
+            <Container>
+                <div className="mx-4 mt-4">
+                    <FoodSearch handleSearch={handleSearch} ></FoodSearch>
+                    <FootItems foodItems={foodItems}></FootItems>
+                </div>
+            </Container>
         </div>
     );
 };

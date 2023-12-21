@@ -1,10 +1,10 @@
 import TodoItem from "./TodoItem";
-
+import styles from './Todo.module.css'
 const Todo = () => {
     return (
         <div>
             <center className="todo-container">
-                <h1>Todo App</h1>
+                <h1 className={styles.headings}>Todo App</h1>
                 <div className="row">
                     <div className="col-6">
                         <input type="text" placeholder="Enter todo here" />
