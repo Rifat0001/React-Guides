@@ -5,6 +5,7 @@ import { useState } from "react";
 import Error from "./Error";
 const Todo = () => {
     const [tasks, setTasks] = useState([]);
+    
     const handleAddTask = (name, date) => {
         console.log(name, date)
         const newTask = {
