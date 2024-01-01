@@ -1,8 +1,9 @@
-import Socialmedia from "./SocialMedia/Socialmedia"
+import Redux from "./Redux tool kit first/Redux"
+
 function App() {
   return (
-    <div className="mx-4 mt-4">
-      <Socialmedia></Socialmedia>
+    <div className="mx-4 mx-auto d-flex justify-content-center mt-4">
+      <Redux></Redux>
     </div>
   )
 }
